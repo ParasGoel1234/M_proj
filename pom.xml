@@ -9,8 +9,8 @@
   <url>http://maven.apache.org</url>
   
   <properties>
-		<maven.compiler.target>11</maven.compiler.target>
-		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
 		<junit.jupiter.version>5.4.0</junit.jupiter.version>
 	</properties>
   
@@ -41,6 +41,27 @@
 
 	  
   <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>3.0.1</version>
+        <scope>provided</scope>
+</dependency>
+
+<dependency>
+	<groupId>javax</groupId>
+	<artifactId>javaee-api</artifactId>
+	<version>7.0</version>
+	  </dependency>
+
+<dependency>
+	<groupId>javax</groupId>
+	<artifactId>javaee-web-api</artifactId>
+	<version>7.0</version>
+	<scope>provided</scope>
+	  </dependency> 
+
+  <dependency>
+
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-engine</artifactId>
 			<version>${junit.jupiter.version}</version>
@@ -79,6 +100,18 @@
     </dependency>
   </dependencies>
   <build>
+    <plugins>
+         <plugin>
+             <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-surefire-plugin</artifactId>
+         <version>2.22.0</version>
+         </plugin>
+         <plugin>
+             <groupId>org.apache.maven.plugins</groupId>
+             <artifactId>maven-failsafe-plugin</artifactId>
+             <version>2.22.0</version></plugin>
+             </plugins>
+
     <finalName>projectmaven</finalName>
   </build>
 </project>

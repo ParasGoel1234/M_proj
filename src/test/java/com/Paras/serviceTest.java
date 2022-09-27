@@ -10,7 +10,7 @@ class serviceTest {
 	void test() {
 		
 		service sv = new service();
-		float ex = 15;
+		float ex = 20;
 		float act = sv.add(10, 10);
 		assertEquals(ex, act);
 		
